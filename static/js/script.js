@@ -1,34 +1,63 @@
-/*!
-* Start Bootstrap - Resume v7.0.6 (https://startbootstrap.com/theme/resume)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
-*/
-//
-// Scripts
-//
+const body = document.body
 
-window.addEventListener('DOMContentLoaded', event => {
+const btnTheme = document.querySelector('.fa-moon')
+const btnHamburger = document.querySelector('.fa-bars')
 
-    // Activate Bootstrap scrollspy on the main nav element
-    const sideNav = document.body.querySelector('#sideNav');
-    if (sideNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#sideNav',
-            rootMargin: '0px 0px -40%',
-        });
-    };
+const addThemeClass = (bodyClass, btnClass) => {
+  body.classList.add(bodyClass)
+  btnTheme.classList.add(btnClass)
+}
 
-    // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
-        });
-    });
+const getBodyTheme = localStorage.getItem('portfolio-theme') || 'dark';
+const getBtnTheme = localStorage.getItem('portfolio-btn-theme') || 'fa-sun';
 
-});
+addThemeClass(getBodyTheme, getBtnTheme)
+
+const isDark = () => body.classList.contains('dark')
+
+const setTheme = (bodyClass, btnClass) => {
+
+	body.classList.remove(localStorage.getItem('portfolio-theme'))
+	btnTheme.classList.remove(localStorage.getItem('portfolio-btn-theme'))
+
+  addThemeClass(bodyClass, btnClass)
+
+	localStorage.setItem('portfolio-theme', bodyClass)
+	localStorage.setItem('portfolio-btn-theme', btnClass)
+}
+
+const toggleTheme = () =>
+  isDark() ? setTheme('light', 'fa-moon') : setTheme('dark', 'fa-sun');
+
+btnTheme.addEventListener('click', toggleTheme)
+
+const displayList = () => {
+	const navUl = document.querySelector('.nav__list')
+
+	if (btnHamburger.classList.contains('fa-bars')) {
+		btnHamburger.classList.remove('fa-bars')
+		btnHamburger.classList.add('fa-times')
+		navUl.classList.add('display-nav-list')
+	} else {
+		btnHamburger.classList.remove('fa-times')
+		btnHamburger.classList.add('fa-bars')
+		navUl.classList.remove('display-nav-list')
+	}
+}
+
+btnHamburger.addEventListener('click', displayList)
+
+const scrollUp = () => {
+	const btnScrollTop = document.querySelector('.scroll-top')
+
+	if (
+		body.scrollTop > 500 ||
+		document.documentElement.scrollTop > 500
+	) {
+		btnScrollTop.style.display = 'block'
+	} else {
+		btnScrollTop.style.display = 'none'
+	}
+}
+
+document.addEventListener('scroll', scrollUp)

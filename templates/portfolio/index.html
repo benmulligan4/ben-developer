@@ -1,298 +1,232 @@
-<!DOCTYPE html>
+{% load static %}
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta name="description" content=""/>
-    <meta name="author" content=""/>
-    <title>Resume - Ben Mulligan</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"
-          type="text/css"/>
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css"/>
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="../../static/css/styles.css" rel="stylesheet"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Portfolio"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+            rel="stylesheet"
+    />
+    <script
+            src="https://kit.fontawesome.com/fa62c117c7.js"
+            crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
+    <title>Ben Mulligan</title>
 </head>
-<body id="page-top">
-<!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none">Ben Mulligan</span>
-        <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2"
-                                             src="../../static/images/profile.jpg" alt="..."/></span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
-            class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#positions">Positions of Responsibility</a>
+<body class="light" id="top">
+<header class="header center">
+    <h3>
+        <a href="https://github.com/benmulligan4/ben-mulligan.com" class="link"
+        >BM.</a
+        >
+    </h3>
+
+    <nav class="nav center">
+        <ul class="nav__list center">
+            <li class="nav__list-item">
+                <a class="link link--nav" href="#education">Education</a>
+            </li>
+            <li class="nav__list-item">
+                <a class="link link--nav" href="#experience">Experience</a>
+            </li>
+            <li class="nav__list-item">
+                <a class="link link--nav" href="#skills">Skills</a>
+            </li>
+            <li class="nav__list-item">
+                <a class="link link--nav" href="#programming-languages">Programming Languages</a>
+            <li class="nav__list-item">
+                <a class="link link--nav" href="#contact">Contact</a>
             </li>
         </ul>
+
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+            <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+
+        <button
+                type="button"
+                aria-label="toggle navigation"
+                class="btn btn--icon nav__hamburger"
+        >
+            <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+    </nav>
+</header>
+
+<main>
+    <!-- About -->
+    <div class="about center">
+        <h1>Hi, I am <span class="about__name">Ben Mulligan.</span></h1>
+        <h2 class="about__role">A Front end Developer.</h2>
+        <p class="about__desc">
+            1 Cheltenham Terrace, Heaton, Newcastle upon Tyne, NE6 5HR United Kingdom<br>
+            benmulligan@gmail.com ~ +44 7495409633
+        </p>
+        <p class="about__desc">
+            <!-- TODO insert about text here -->
+            About description text here
+        </p>
+
+        <div class="about__contact center">
+            <a href="https://example.com">
+                <span class="btn btn--outline">Resume</span>
+            </a>
+
+            <a
+                    href="https://github.com/benmulligan4"
+                    aria-label="github"
+                    class="link link--icon"
+            >
+                <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+
+            <a
+                    href="https://www.linkedin.com/in/ben-mulligan-87972323b/"
+                    aria-label="linkedin"
+                    class="link link--icon"
+            >
+                <i aria-hidden="true" class="fab fa-linkedin"></i>
+            </a>
+        </div>
     </div>
-</nav>
-<!-- Page Content-->
-<div class="container-fluid p-0">
-    <!-- About-->
-    <section class="resume-section" id="about">
-        <div class="resume-section-content">
-            <h1 class="mb-0">
-                Ben
-                <span class="text-primary">Mulligan</span>
-            </h1>
-            <div class="subheading mb-5">
-                1 Cheltenham Terrace, Heaton, Newcastle upon Tyne, NE6 5HR United Kingdom ·
-                <a href="mailto:benmulligan@gmail.com">benmulligan@gmail.com</a> · +44 7495409633
-            </div>
-            <p class="lead mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for high
-                level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the
-                overall value proposition.</p>
-            <div class="social-icons">
-                <a class="social-icon" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                <a class="social-icon" href="#!"><i class="fab fa-github"></i></a>
-                <a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a>
-                <a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a>
-            </div>
+
+    <!-- Education -->
+    <section class="section education" id="education">
+        <h2 class="section__title">Education</h2>
+        <p>Bachelor of Science, Computer Science with Industrial Placement<br>
+            University of Newcastle Upon Tyne, United Kingdom<br>
+            Predicted First Class with Honours<br>
+            Graduation: June 2025</p>
+        <p>Shrewsbury School<br>
+            Sept 2016 - Jul 2021<br>
+            A Levels: Business Studies (A*), Computer Science (A), Mathematics (A)<br>
+            i/GCSEs: Biology (8), Chemistry (8), Physics (8), Mathematics (8), Spanish (8), English (A), English Lit.
+            (A), Computer Science (7), Drama (7), History (B)</p>
+    </section>
+
+    <!-- Experience -->
+    <section class="section experience" id="experience">
+        <h2 class="section__title">Experience</h2>
+        <p>Software Developer ISD Placement, Nissan<br>
+            Aug 2023 - Aug 2024, Sunderland, England</p>
+        <ul>
+            <li>Lead developer of the Academy section in the Nissan Developer Web App, streamlining API management and
+                UAT processes using Spring Boot and Angular for a robust knowledge-sharing platform.
+            </li>
+            <li>Managed bi-weekly Monozukuri meetings for Managers and Directors across plants globally, creating
+                agendas, facilitating business updates, and incorporating interactive elements to enhance engagement.
+            </li>
+            <li>Developed Secure Web Services: Created and optimized SOAP and REST services, improving data retrieval
+                and error handling processes.
+            </li>
+            <li>Contributed to Project Butterfly: Assisted in AI-driven inventory optimization and stock loss
+                prevention, collaborating with industry vendors.
+            </li>
+            <li>Mainframe Training and Development: Gained proficiency in NATURAL programming and mainframe interface,
+                developing and promoting programs across environments.
+            </li>
+            <li>Enhanced Presentation Skills: Completed a presentation skills course and applied techniques to
+                effectively lead meetings and communicate complex technical concepts.
+            </li>
+        </ul>
+        <p>Bar Staff Member, Bar Blanc<br>
+            Aug 2022 - Dec 2022, Newcastle, England</p>
+        <ul>
+            <li>Completed daily opening and closing checklists and housekeeping responsibilities.</li>
+            <li>Created unique and enjoyable experiences for customers with strong mixology and service skills.</li>
+            <li>Consistently maintained impeccable standards of presentation on dining and bar floors.</li>
+        </ul>
+        <p>Summer Intern, Blevins Franks Wealth Management Ltd<br>
+            Aug 2021 - Sep 2021, Marbella, Spain</p>
+        <ul>
+            <li>Client database analysis and identification of portfolios that required review.</li>
+            <li>Preparation of annual portfolio review documentation.</li>
+            <li>Designed and created an internal staff holiday calendar, utilized company-wide.</li>
+            <li>Completed assigned tasks receiving positive feedback on organization and time management skills.</li>
+        </ul>
+    </section>
+
+    <!-- Skills -->
+    <section class="section skills" id="skills">
+        <h2 class="section__title">Skills</h2>
+        <div class="plain-list">
+            • Well-versed in managing databases and SQL.<br>
+            • Skilled in Angular and Spring development, deftly applying HTML, CSS, JavaScript, TypeScript, and
+            Markdown.<br>
+            • Competent in MRP software management, Grafana dashboards, Microsoft Office, and Google Services.<br>
+            • Proficient in Git, CLI commands, and Arduino circuit board programming, complemented by extensive
+            experience in soldering and working with Arduino technology.<br>
+            • Expertise in integrating and managing APIs to enhance web applications.<br>
+            • Proficient in Agile and Scrum methodologies for efficient project management.<br>
+            • Conducted thorough testing and debugging to ensure high-quality software delivery.<br>
+            • Developed comprehensive documentation for software projects and processes.<br>
+            • Strong analytical and problem-solving skills to address complex technical issues.<br>
+            • Applied principles of user interface and user experience design to improve usability.<br>
+            • Strong interpersonal skills, highly analytical, adaptive, decisive, and team-player.<br>
+            • Confident Spanish speaker after living in Spain for 16 years.
         </div>
     </section>
-    <hr class="m-0"/>
-    <!-- Education-->
-    <section class="resume-section" id="education">
-        <div class="resume-section-content">
-            <h2 class="mb-5">Education</h2>
-            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="flex-grow-1">
-                    <h3 class="mb-0">University of Newcastle Upon Tyne</h3>
-                    <div class="subheading mb-3">Bachelor of Science, Computer Science with Industrial Placement</div>
-                    <p>Predicted First Class with Honours</p>
-                    <p>Graduation: June 2025</p>
-                </div>
-            </div>
-            <div class="d-flex flex-column flex-md-row justify-content-between">
-                <div class="flex-grow-1">
-                    <h3 class="mb-0">Shrewsbury School</h3>
-                    <div class="subheading mb-3">Sept 2016 - Jul 2021</div>
-                    <p>A Levels: Business Studies (A*), Computer Science (A), Mathematics (A)</p>
-                    <p>i/GCSEs: Biology (8), Chemistry (8), Physics (8), Mathematics (8), Spanish (8), English (A),
-                        English Lit. (A), Computer Science (7), Drama (7), History (B)</p>
-                </div>
-            </div>
-        </div>
+
+    <section class="section programming-languages" id="programming-languages">
+        <h2 class="section__title">Programming Languages</h2>
+        <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">Python</li>
+            <li class="skills__list-item btn btn--plain">Java</li>
+            <li class="skills__list-item btn btn--plain">C</li>
+            <li class="skills__list-item btn btn--plain">Go</li>
+            <li class="skills__list-item btn btn--plain">NATURAL</li>
+        </ul>
     </section>
-    <hr class="m-0"/>
-    <!-- Experience-->
-    <section class="resume-section" id="experience">
-        <div class="resume-section-content">
-            <h2 class="mb-5">Experience</h2>
-            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="flex-grow-1">
-                    <h3 class="mb-0">Software Developer ISD Placement</h3>
-                    <div class="subheading mb-3">Nissan</div>
-                    <p>Aug 2023 - Aug 2024, Sunderland, England</p>
-                    <ul>
-                        <li>Lead developer of the Academy section in the Nissan Developer Web App, streamlining API
-                            management and UAT processes using Spring Boot and Angular for a robust knowledge-sharing
-                            platform.
-                        </li>
-                        <li>Managed bi-weekly Monozukuri meetings for Managers and Directors across plants globally,
-                            creating agendas, facilitating business updates, and incorporating interactive elements to
-                            enhance engagement.
-                        </li>
-                        <li>Developed Secure Web Services: Created and optimized SOAP and REST services, improving data
-                            retrieval and error handling processes.
-                        </li>
-                        <li>Contributed to Project Butterfly: Assisted in AI-driven inventory optimization and stock
-                            loss prevention, collaborating with industry vendors.
-                        </li>
-                        <li>Mainframe Training and Development: Gained proficiency in NATURAL programming and mainframe
-                            interface, developing and promoting programs across environments.
-                        </li>
-                        <li>Enhanced Presentation Skills: Completed a presentation skills course and applied techniques
-                            to effectively lead meetings and communicate complex technical concepts.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="flex-grow-1">
-                    <h3 class="mb-0">Bar Staff Member</h3>
-                    <div class="subheading mb-3">Bar Blanc</div>
-                    <p>Aug 2022 - Dec 2022, Newcastle, England</p>
-                    <ul>
-                        <li>Completed daily opening and closing checklists and housekeeping responsibilities.</li>
-                        <li>Created unique and enjoyable experiences for customers with strong mixology and service
-                            skills.
-                        </li>
-                        <li>Consistently maintained impeccable standards of presentation on dining and bar floors.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="flex-grow-1">
-                    <h3 class="mb-0">Summer Intern</h3>
-                    <div class="subheading mb-3">Blevins Franks Wealth Management Ltd</div>
-                    <p>Aug 2021 - Sep 2021, Marbella, Spain</p>
-                    <ul>
-                        <li>Client database analysis and identification of portfolios that required review.</li>
-                        <li>Preparation of annual portfolio review documentation.</li>
-                        <li>Designed and created an internal staff holiday calendar, utilized company-wide.</li>
-                        <li>Completed assigned tasks receiving positive feedback on organization and time management
-                            skills.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+
+    <!-- Positions of Responsibility -->
+    <section class="section positions" id="positions">
+        <h2 class="section__title">Positions of Responsibility</h2>
+        <ul>
+            <li>2023-2024 - Lead developer for the Nissan Developer Academy Web App.</li>
+            <li>2022-2023 - Peer mentor for incoming Newcastle University Computer Science students.</li>
+            <li>2021-2025 - Member of Newcastle University Computer Science Society.</li>
+            <li>2020-2021 - Head of House at Ingrams Hall, Shrewsbury School.</li>
+            <li>2019-2021 - Lead Representative of the Eco Committee Society at Shrewsbury School.</li>
+            <li>2020-2021 - Member of Shrewsbury Schools Individual Diversity Committee.</li>
+            <li>2018-2020 - Member of Shrewsbury Schools Global Social Leaders Society (GSL).</li>
+            <li>2016-2021 - Recruited for Shrewsbury Schools Combined Cadet Force (CCF).</li>
+            <li>2016-2021 - Digital house representative for Ingram's hall at Shrewsbury School.</li>
+        </ul>
     </section>
-    <hr class="m-0"/>
-    <!-- Skills-->
-    <section class="resume-section" id="skills">
-        <div class="resume-section-content">
-            <h2 class="mb-5">Skills</h2>
-            <div class="subheading mb-3">Programming Languages & Tools</div>
-            <ul class="list-inline dev-icons">
-                <li class="list-inline-item"><i class="fab fa-python"></i></li>
-                <li class="list-inline-item"><i class="fab fa-java"></i></li>
-                <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
-                <li class="list-inline-item"><i class="fab fa-angular"></i></li>
-                <li class="list-inline-item"><i class="fab fa-react"></i></li>
-                <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
-                <li class="list-inline-item"><i class="fab fa-sass"></i></li>
-                <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-                <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-                <li class="list-inline-item"><i class="fab fa-git"></i></li>
-            </ul>
-            <div class="subheading mb-3">Workflow</div>
-            <ul class="fa-ul mb-0">
-                <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span>
-                    Extremely proficient in Python, Java, C, Go, and NATURAL programming.
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span>
-                    Well-versed in managing databases and SQL.
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span>
-                    Skilled in Angular and Spring development, deftly applying HTML, CSS, JavaScript, TypeScript, and
-                    Markdown.
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span>
-                    Competent in MRP software management, Grafana dashboards, Microsoft Office, and Google Services.
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span>
-                    Proficient in Git, CLI commands, and Arduino circuit board programming, complemented by extensive
-                    experience in soldering and working with Arduino technology.
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span>
-                    Expertise in integrating and managing APIs to enhance web applications.
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span>
-                    Proficient in Agile and Scrum methodologies for efficient project management.
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span>
-                    Conducted thorough testing and debugging to ensure high-quality software delivery.
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span>
-                    Developed comprehensive documentation for software projects and processes.
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span>
-                    Strong analytical and problem-solving skills to address complex technical issues.
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span>
-                    Applied principles of user interface and user experience design to improve usability.
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span>
-                    Strong interpersonal skills, highly analytical, adaptive, decisive, and team-player.
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span>
-                    Confident Spanish speaker after living in Spain for 16 years.
-                </li>
-            </ul>
-        </div>
+
+    <!-- Contact -->
+    <section class="section contact center" id="contact">
+        <h2 class="section__title">Contact</h2>
+        <a href="mailtobenmulligan4@gmail.com">
+            <span class="btn btn--outline">Email me</span>
+        </a>
     </section>
-    <hr class="m-0"/>
-    <!-- Positions of Responsibility-->
-    <section class="resume-section" id="positions">
-        <div class="resume-section-content">
-            <h2 class="mb-5">Positions of Responsibility</h2>
-            <ul class="fa-ul mb-0">
-                <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span>
-                    2023-2024 - Lead developer for the Nissan Developer Academy Web App.
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span>
-                    2022-2023 - Peer mentor for incoming Newcastle University Computer Science students.
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span>
-                    2021-2025 - Member of Newcastle University Computer Science Society.
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span>
-                    2020-2021 - Head of House at Ingrams Hall, Shrewsbury School.
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span>
-                    2019-2021 - Lead Representative of the Eco Committee Society at Shrewsbury School.
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span>
-                    2020-2021 - Member of Shrewsbury Schools Individual Diversity Committee.
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span>
-                    2018-2020 - Member of Shrewsbury Schools Global Social Leaders Society (GSL).
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span>
-                    2016-2021 - Recruited for Shrewsbury Schools Combined Cadet Force (CCF).
-                </li>
-                <li>
-                    <span class="fa-li"><i class="fas fa-check"></i></span>
-                    2016-2021 - Digital house representative for Ingram's hall at Shrewsbury School.
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!-- Interests-->
-    <section class="resume-section" id="interests">
-        <div class="resume-section-content">
-            <h2 class="mb-5">Interests</h2>
-                    <!-- TODO Insert Interests here -->
-                    <p>Insert interests here</p>
-                    <p class="mb-0">Insert interests here</p>
-        </div>
-    </section>
-    <!-- References-->
-<!-- References-->
-<section class="footer-note" id="references">
-    <div>
-        <p>References available upon request.</p>
+</main>
+
+<footer class="footer">
+    <a
+            href="https://github.com/benmulligan4/ben-mulligan.com"
+            class="link footer__link"
+    >
+        Created By Ben Mulligan
+    </a>
+</footer>
+
+<div class="scroll-container">
+    <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+            <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
     </div>
-</section>
 </div>
-<!-- Bootstrap core JS-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Core theme JS-->
-<script src="../../static/js/script.js"></script>
+
+
+href="{% static 'css/styles.css' %}"
+<script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
